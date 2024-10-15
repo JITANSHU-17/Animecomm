@@ -25,17 +25,21 @@ body {
 .login-container {
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
 }
 
 h2 {
+    color: white;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
 .input-group {
+    color: white;
     margin-bottom: 15px;
     text-align: left;
 }
@@ -49,42 +53,50 @@ input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
 }
 
 .login-btn {
     width: 100%;
     padding: 10px;
-    background-color: #5cb85c;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
+    font-size: 1rem;
     cursor: pointer;
     margin-bottom: 20px;
 }
 
 .login-btn:hover {
-    background-color: #4cae4c;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
 }
 
 .google-login {
+    color: white;
     margin-top: 20px;
 }
 
 .google-link {
     display: inline-block;
     text-decoration: none;
-    color: black;
+    color: white;
     border: 1px solid #ccc;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 20px;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
 .google-link:hover {
-    background-color: #f8f8f8;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .google-logo {
