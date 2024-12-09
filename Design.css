@@ -1,0 +1,330 @@
+/* General Styles */
+  
+  /* Header */
+  header {
+    background: #000;
+    color: #fff;
+  }
+  
+  .top-bar {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:black;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  }
+  
+  nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:transparent;
+    
+    color: white;
+  }
+  nav .logo:hover
+  {
+    background-color:none;
+  }
+  
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+nav li{
+    height:  50px;   
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color:white;
+}
+nav a:hover
+{
+  color: lightgray;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+  
+  /* Hero Banner */
+  .banner-section {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background-color:transparent;
+  }
+  .banner-section h2
+  {
+    position: center;
+    color: white;
+  }
+
+  .product-item {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .product-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+  .product-item h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color:black;
+  }
+
+  .product-item span {
+    font-size: 16px;
+    color:black;
+  }
+
+  .product-item.active {
+    display: flex;
+    opacity: 1.5;
+  }
+
+  .product-item:not(.active) {
+    opacity: 0.5;
+  }
+
+  .controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .control {
+    width: 15px;
+    height: 15px;
+    background-color:lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .control.active {
+    background-color: gray;
+  }
+
+  /* Footer */
+  footer {
+    background:black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  .sidebar
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 259px;
+    z-index: 999;
+    background-color: rgba(255,255,255,0,2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu
+{
+    display: none;
+}
+@media(max-width:800px)
+{
+    .hideOnMobile
+    {
+        display: none;
+    }
+    .menu
+    {
+        display:block;
+    }
+}
+@media(max-width:400px)
+{
+    .sidebar
+    {
+        width: 100%;
+    }
+}
+.scroll-container {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+  box-sizing: border-box;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #888 #f9f9f9; /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+ /* Product Sections */
+ .hottest-cases h2{
+  color: white;
+ }
+ .limited-release h2{
+  color: white;
+ }
+.product {
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  margin: 0 10px;
+  background-color:transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  vertical-align: top;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.product h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  color:black;
+}
+
+.product button {
+  padding: 10px 20px;
+  background-color:lightgrey;
+  color:black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color:gray;
+}
+.faq
+{
+  background-color: transparent;
+  color: white;
+}
+
+/* Tooltip Styles */
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: -425%; /* Adjust position above the link */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color:black;
+  color:white;
+  text-align: auto;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.hideOnMobile:hover .tooltip {
+  display: block;
+  opacity: 1;
+}
+
+/*
+ .navbar {
+  background-color: #333;
+  padding: 1em 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-item {
+  position: relative;
+  margin: 0 15px;
+}
+
+.navbar .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #00bcd4;
+}
+*/

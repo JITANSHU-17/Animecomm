@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namo Covers</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('Anime.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .header, .section, .main, .footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .header {
+      height: 100px;
+    }
+
+    .section {
+      height: 300px;
+    }
+
+    .main {
+      height: 500px;
+    }
+
+    .footer {
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <p>Free Shipping Worldwide | Hassle-Free Returns</p>
+    </div>
+    <nav>
+      <a href="#" class="logo">Namo Covers</a>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li>
+          <a href="#">Shop</a>
+        </li>
+        <li>
+          <a href="#">Anime</a>
+        </li>
+        <li>
+          <a href="#">Reviews</a>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+      <ul>
+        <li class="hideOnMobile">
+          <a href="#" class="nav-link">Shop</a>
+          <div class="tooltip">Go to the Shop-page</div>
+        </li>
+        <li class="hideOnMobile">
+          <a href="#" class="nav-link">Anime</a>
+          <div class="tooltip">Go to the Anime-page</div>
+        </li>
+        <li class="hideOnMobile">
+          <a href="#" class="nav-link">Reviews</a>
+          <div class="tooltip">Go to the Reviews-page</div>
+        </li>
+        <li class="hideOnMobile">
+          <a href="#" class="nav-link">About Us</a>
+          <div class="tooltip">Go to the About Us-page</div>
+        </li>
+        <li class="hideOnMobile">
+          <a href="#" class="nav-link">Contact</a>
+          <div class="tooltip">Go to the Contact-page</div>
+        </li>
+        <li class="menu" onclick=ShowSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -950 950 950" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="banner-section">
+      <h2>TOP SALES</h2>
+      <div class="product-item active" data-index="0">
+        <img src="images/p1.jfif" alt="Product 1">
+        <h4>Product 1</h4>
+        <span>$10.00</span>
+      </div>
+      <div class="product-item" data-index="1">
+        <img src="images/k1.jfif" alt="Product 2">
+        <h4>Product 2</h4>
+        <span>$20.00</span>
+      </div>
+      <div class="product-item" data-index="2">
+        <img src="images/p2.jfif" alt="Product 3">
+        <h4>Product 3</h4>
+        <span>$30.00</span>
+      </div>
+      <div class="product-item" data-index="3">
+        <img src="images/k2.jfif" alt="Product 4">
+        <h4>Product 4</h4>
+        <span>$40.00</span>
+      </div>
+      <div class="product-item" data-index="4">
+        <img src="images/p3.jfif" alt="Product 5">
+        <h4>Product 5</h4>
+        <span>$50.00</span>
+      </div>
+  
+      <div class="controls">
+        <div class="control active" data-index="0" onclick="manualSelect(0)"></div>
+        <div class="control" data-index="1" onclick="manualSelect(1)"></div>
+        <div class="control" data-index="2" onclick="manualSelect(2)"></div>
+        <div class="control" data-index="3" onclick="manualSelect(3)"></div>
+        <div class="control" data-index="4" onclick="manualSelect(4)"></div>
+      </div>
+    </section>
+
+    <!-- Hottest Selling Cases -->
+    <section class="hottest-cases"> 
+      <h2>Hottest Selling Cases</h2>
+      <div class="scroll-container">
+        <div class="product">
+          <img src="images/p1.jfif" alt="Product 1">
+          <h3>Product 1</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/p2.jfif" alt="Product 2">
+          <h3>Product 2</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/p3.jfif" alt="Product 3">
+          <h3>Product 3</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/p4.jfif" alt="Product 4">
+          <h3>Product 4</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/p5.jfif" alt="Product 5">
+          <h3>Product 5</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/p6.jfif" alt="Product 6">
+          <h3>Product 6</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/p7.jfif" alt="Product 7">
+          <h3>Product 7</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/p8.jfif" alt="Product 8">
+          <h3>Product 8</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/p9.jfif" alt="Product 9">
+          <h3>Product 9</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/p10.jfif" alt="Product 10">
+          <h3>Product 10</h3>
+          <button>Select</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Limited Release Section -->
+    <section class="limited-release">
+      <h2>Limited Release: Trending Anime Cases</h2>
+      <div class="scroll-container">
+        <div class="product">
+          <img src="images/k1.jfif" alt="Product 1">
+          <h3>Product 1</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/k2.jfif" alt="Product 2">
+          <h3>Product 2</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/k3.jfif" alt="Product 3">
+          <h3>Product 3</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/k4.jfif" alt="Product 4">
+          <h3>Product 4</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/k5.jfif" alt="Product 5">
+          <h3>Product 5</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/k6.jfif" alt="Product 6">
+          <h3>Product 6</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/k7.jfif" alt="Product 7">
+          <h3>Product 7</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/k8.jfif" alt="Product 8">
+          <h3>Product 8</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/k9.jfif" alt="Product 9">
+          <h3>Product 9</h3>
+          <button>Select</button>
+        </div>
+        <div class="product">
+          <img src="images/k10.jfif" alt="Product 10">
+          <!--
+          https://via.placeholder.com/200x150
+          -->
+          <h3>Product 10</h3>
+          <button>Select</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>FAQ's</h2>
+      <div class="faq-item">
+        <h3>How long does shipping take?</h3>
+        <p>Shipping typically takes 5-7 business days.</p>
+      </div>
+      <!-- Add more FAQ items -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Namo Covers. All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    function ShowSidebar()
+    {
+        const sidebar=document.querySelector('.sidebar')
+        sidebar.style.display='flex'
+    }
+    function hideSidebar()
+    {
+        const sidebar=document.querySelector('.sidebar')
+        sidebar.style.display='none'
+    }
+
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.product-item');
+    const controls = document.querySelectorAll('.control');
+
+    // Function to show the current product
+    function showProduct(index) {
+      // Remove "active" class from all items and controls
+      items.forEach(item => item.classList.remove('active'));
+      controls.forEach(control => control.classList.remove('active'));
+
+      // Add "active" class to the current item and control
+      items[index].classList.add('active');
+      controls[index].classList.add('active');
+
+      currentIndex = index;
+    }
+
+    // Auto-rotate functionality
+    function autoRotate() {
+      currentIndex = (currentIndex + 1) % items.length;
+      showProduct(currentIndex);
+    }
+
+    // Manual selection functionality
+    function manualSelect(index) {
+      clearInterval(autoRotateInterval); // Stop auto-rotation temporarily
+      showProduct(index);
+      autoRotateInterval = setInterval(autoRotate, 4000); // Restart auto-rotation
+    }
+
+    // Start auto-rotation
+    let autoRotateInterval = setInterval(autoRotate, 4000);
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
